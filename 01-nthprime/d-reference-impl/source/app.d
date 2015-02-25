@@ -9,13 +9,13 @@ import std.parallelism;
     bool[] sieve; // the value at position n is primality of the integer n
     sieve.length = 1 << 30;
     auto nth = 0;
-    for (int i = 2; i < sieve.length; i++) {
+    foreach (i; 2 .. sieve.length) {
         if (!sieve[i]) {
             nth++;
             if (nth == n) {
                 return cast(int) i;
             }
-            for (int j = i*i; j < sieve.length; j += i) {
+            foreach (j; iota(i*i, sieve.length, i)) {
                 sieve[j] = true;
             }
         }
