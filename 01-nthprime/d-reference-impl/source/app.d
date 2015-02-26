@@ -7,7 +7,8 @@ import std.parallelism;
 
 @safe int nth_prime(int n) pure {
     bool[] sieve; // the value at position n is primality of the integer n
-    sieve.length = 1 << 30;
+    auto possible = (n * log(n) * log(log(n + 5))).floor.to!ulong;
+    sieve.length = 100 + possible;
     auto nth = 0;
     foreach (i; 2 .. sieve.length) {
         if (!sieve[i]) {
@@ -23,8 +24,9 @@ import std.parallelism;
     return -1;
 }
 
-void main()
+void main(string[] args)
 {
-    auto n = nth_prime(1000);
-    writeln(n);
+    auto n = args[1].to!int;
+    auto nth = nth_prime(n);
+    writeln(n, " : ", nth);
 }
