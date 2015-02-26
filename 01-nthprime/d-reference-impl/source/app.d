@@ -7,8 +7,8 @@ import std.parallelism;
 
 @safe int nth_prime(int n) pure {
     bool[] sieve; // the value at position n is primality of the integer n
-    auto possible = (n * log(n) * log(log(n + 5))).floor.to!ulong;
-    sieve.length = 100 + possible;
+    auto factor = 22; // The largest factor of P(n) / n we'll be dealing with it about 22
+    sieve.length = n * factor;
     auto nth = 0;
     foreach (i; 2 .. sieve.length) {
         if (!sieve[i]) {
