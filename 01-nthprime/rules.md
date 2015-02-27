@@ -12,9 +12,16 @@ Given a number, n, as an argument to your program, print the nth prime.
 Submission
 ----------
 
-Details TBA, but you're gonna need to provide a makefile for installing your language compiler/runtime stuff, compiling (if necessary) and running
+In order to submit, you must create an issue on this repository with the folowing information:
+- The tags `01-nthprime` and `submission`
+- A link to your code. Your code must contain:
+    - Code (duh)
+    - A Makefile with at least 3 targets:
+        - `install`, which sets up any dependencies for your project
+        - `compile`, which does any necessary compilation for your project
+        - `run`, which takes an argument, `n`, and runs your program with that as the first argument. This is what will be timed
 
-Submissions due at 11:55 on Feb. 28.
+Submissions due at 11:55 on Mar. 4.
 
 Da Rulez
 --------
