@@ -31,8 +31,8 @@ Da Rulez
 2. Programs that generate incorrect solutions will be disqualified.
 3. Programs' scores are the amount of User time they take, as reported by the unix `time` utility. Lowest score wins.
 4. Programs must do the computations during their own runtime
-    a. No compile-time generation of answers
-    b. No shelling out to a web service for answers
-    c. No forking a daemon and querying that on subsequent runs
-    d. No sticking answers in a file and looking there on the next run
-    e. If you do something that the judges feel is cheating, your program can be disqualified.
+    1. No compile-time generation of answers
+    2. No shelling out to a web service for answers
+    3. No forking a daemon and querying that on subsequent runs
+    4. No sticking answers in a file and looking there on the next run
+    5. If you do something that the judges feel is cheating, your program can be disqualified.
