@@ -26,7 +26,11 @@ int nth_prime(int n) {
 
 void main(string[] args)
 {
-    auto n = args[1].to!int;
-    auto nth = nth_prime(n);
-    writeln(n, " : ", nth);
+    if (args.length > 1) {
+        auto n = args[1].to!int;
+        auto nth = nth_prime(n);
+        writeln(n, " : ", nth);
+    } else {
+        writeln("You need to specify an n as an argument to this command!");
+    }
 }
